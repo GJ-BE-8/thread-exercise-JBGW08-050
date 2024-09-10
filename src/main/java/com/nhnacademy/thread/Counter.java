@@ -21,30 +21,36 @@ public class Counter {
 
     public Counter(long countMaxSize) {
         //TODO#1 countMaxSize < 0 작다면 IllegalArgumentException 예외가 발생 합니다.
+        if(countMaxSize <= 0) {
+            throw new IllegalArgumentException("countMaxSize 가 0보다 커야함");
+        }
 
         //TODO#2 this.countMaxSize 초기화 합니다.
+        this.countMaxSize = countMaxSize;
 
         //TODO#3 this.count 값을 0으로 초기화 합니다.
-
+        this.count = 0;
     }
 
     public void run() {
 
-        do {
-
-            /*TODO#4 1초 간격 으로 count++ 됩니다.
+        /*TODO#4 1초 간격 으로 count++ 됩니다.
               Thread.sleep method를 사용하세요.
               https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Thread.html#sleep(java.time.Duration)
             */
-
+        do {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             count++;
-
             /*TODO#5 count 출력
                 name:{Thread name}, count:{count 변수}
                 Thread name : Thread.currentThread().getName();
                 ex) name:my-thread, count:1
              */
-
+            log.debug("name:{},count:{}",Thread.currentThread().getName(),count);
         }while (count<countMaxSize);
     }
 }
