@@ -22,7 +22,7 @@ public class App
         CounterHandler counterHandler = new CounterHandler(10l);
 
         //TODO#5 thread 생성시 counterHandler 객체를 parameter 전달 합니다.
-        Thread thread = new Thread(CounterHander);
+        Thread thread = new Thread(counterHandler);
 
         //TODO#6 thread의 name을 my-counter로 설정 합니다.
         thread.setName("my-counter");
