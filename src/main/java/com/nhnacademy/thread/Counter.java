@@ -50,6 +50,7 @@ public class Counter {
                 Thread name : Thread.currentThread().getName();
                 ex) name:my-thread, count:1
              */
+
             log.debug("name:{},count:{}",Thread.currentThread().getName(),count);
         }while (count<countMaxSize);
     }
