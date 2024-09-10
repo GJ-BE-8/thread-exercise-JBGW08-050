@@ -26,5 +26,6 @@ public class App
         counter.run();
 
         //TODO#7 Counter 생성, countMaxSize는 10으로 설정 후 run method를 호출 합니다.
+
     }
 }

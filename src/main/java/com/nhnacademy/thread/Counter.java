@@ -45,6 +45,7 @@ public class Counter {
                 throw new RuntimeException(e);
             }
             count++;
+
             /*TODO#5 count 출력
                 name:{Thread name}, count:{count 변수}
                 Thread name : Thread.currentThread().getName();
