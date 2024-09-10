@@ -31,7 +31,6 @@ public class CounterHandler implements Runnable  {
 
     @Override
     public void run() {
-
         do {
             try {
                 Thread.sleep(1000);
