@@ -30,13 +30,12 @@ public class SharedCounter {
 
     public long getCount(){
         //TODO#1-2 count 를 반환 합니다.
-
         return count;
     }
 
     public long increaseAndGet(){
         //TODO#1-3 count = count + 1 증가시키고 count를 반환 합니다.
-        count = count =1l;
+        count = count + 1l;
         return count;
     }
 

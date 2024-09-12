@@ -24,7 +24,7 @@ public class App
     {
 
         //TODO#1 shardCounter 객체를 0으로 초기화 합니다.
-        SharedCounter sharedCounter = new SharedCounter();
+        SharedCounter sharedCounter = new SharedCounter(0l);
 
         //TODO#2 counterIncreaseHandler 객체를 생성 합니다.
         CounterIncreaseHandler counterIncreaseHandler = new CounterIncreaseHandler(sharedCounter);
