@@ -26,7 +26,7 @@ public class CounterIncreaseHandler implements Runnable {
         if (Objects.isNull(sharedCounter)) {
             throw new IllegalArgumentException();
         }
-        this.sharedCounter = null;
+        this.sharedCounter = sharedCounter;
     }
 
     @Override
